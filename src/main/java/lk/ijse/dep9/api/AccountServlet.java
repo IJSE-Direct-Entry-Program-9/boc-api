@@ -21,7 +21,7 @@ import java.util.UUID;
 @WebServlet(name = "account-servlet", urlPatterns = "/accounts/*", loadOnStartup = 0)
 public class AccountServlet extends HttpServlet {
 
-    @Resource(lookup = "java:comp/env/jdbc/dep9-boc")
+    @Resource(lookup = "java:comp/env/jdbc/dep9-banking")
     private DataSource pool;
 
     @Override

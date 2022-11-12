@@ -25,7 +25,7 @@ import java.util.Date;
 @WebServlet(name = "transaction-servlet", urlPatterns = "/transactions/*", loadOnStartup = 0)
 public class TransactionServlet extends HttpServlet {
 
-    @Resource(lookup = "java:comp/env/jdbc/dep9-boc")
+    @Resource(lookup = "java:comp/env/jdbc/dep9-banking")
     private DataSource pool;
 
     @Override
