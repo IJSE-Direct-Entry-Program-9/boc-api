@@ -89,6 +89,7 @@ public class TransactionServlet extends HttpServlet {
 
             try{
                 connection.setAutoCommit(false);
+                /* Why is this prepared statement bad when concurrency in place? */
                 PreparedStatement stmUpdate = connection
                         .prepareStatement("UPDATE  Account SET balance = balance + ? WHERE account_number = ?");
                 stmUpdate.setBigDecimal(1, transactionDTO.getAmount());
@@ -225,6 +226,7 @@ public class TransactionServlet extends HttpServlet {
 
             // Business validation
             Connection connection = pool.getConnection();
+            /* How isolation level can change the final outcome of this transaction? */
 //            connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
 
             PreparedStatement stm1 = connection.
