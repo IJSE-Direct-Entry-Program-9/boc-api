@@ -8,6 +8,7 @@
     <artifactId>sample-banking-app</artifactId>
     <version>1.0.0</version>
     <name>sample-banking-app</name>
+    <description>A sample banking app to demonstrate the usage and pitfalls of database transactions</description>
     <packaging>war</packaging>
 
     <properties>
